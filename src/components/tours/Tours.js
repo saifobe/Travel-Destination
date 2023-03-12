@@ -1,18 +1,21 @@
-function Tours(props){
-    return(
+import Tour from './tour/Tour'
+import Row from 'react-bootstrap/Row';
+import './Tours.css'
+const data = require('../../data/db.json')
+
+function Tours() {
+    return (
         <>
-            <h2>Travel</h2>
-            {props.arrData.map((item)=>{
+            <h2 className='txt'>Select Your Destination</h2>
+            <Row xs={1} md={2} className="g-4">
+            {data.map((item)=>{
                 return (
-                    <div key={item.ID}>
-                        <h3>{item.name}</h3>
-                        <img src={item.image} alt={item.name}></img>
-                        <hr/>
-                    </div>
+                    <Tour key={item.id} tour={item} />
                 )
             })}
+            </Row>
         </>
     )
-  }
-  export default Tours;
-  
+}
+export default Tours;
+

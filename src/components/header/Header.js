@@ -1,11 +1,15 @@
 import React from 'react'
+import './Header.css'
+import Navbar from '../navbar/Navbar'
 
-export default function Header() {
+ function Header() {
   return (
     <div>
-     <h1>Welcome to my React page</h1>
+      <Navbar />
+     <h1 className='welcome'>Welcome to my React page</h1>
     </div>
   )
 }
+export default Header;
 
 

@@ -1,14 +1,15 @@
 import React from 'react'
 import Footer from '../footer/Footer'
-import Header from '../header/Header'
 import Tours from '../tours/Tours'
+import './Home.css'
 const data = require("../../data/db.json")
+
 
 function Home() {
   return (
     <div>
-        <Header/>
-        <Tours arrData={data}/>
+        
+        <Tours />
         <Footer/>
     </div>
   )
